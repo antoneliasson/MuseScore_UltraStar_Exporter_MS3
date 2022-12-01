@@ -392,6 +392,8 @@ MuseScore {
 				if (changedTempo) {
 					songContent += "B " + timestamp_midi_ticks + " " + changedTempo + crlf;
 				}		
+			} else if (cursor.element && cursor.element.type === Element.REST) {
+				tookAbreak=true;
 			}
 			cursor.next()
 		}
